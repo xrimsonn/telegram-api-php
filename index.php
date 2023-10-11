@@ -1,15 +1,15 @@
 <?php
 // error_reporting(E_ALL);
 // ini_set('display_errors', 1);
-$token = '6448821928:AAEswUb9WaqljpLHjuvw4c0G4TtYZ96VARw'; // Reemplaza con tu token de acceso
 
-$result = false; // Inicializa $result como falso
+$result = false;
 
 if (isset($_POST['chat_id']) && isset($_POST['msg'])) {
   $chat_id = $_POST['chat_id'];
   $msg = $_POST['msg'];
-
-  $url = "https://api.telegram.org/bot$token/sendMessage"; // Corregir la variable de token
+  
+  $token = '6448821928:AAEswUb9WaqljpLHjuvw4c0G4TtYZ96VARw';
+  $url = "https://api.telegram.org/bot$token/sendMessage";
 
   $data = [
     'chat_id' => $chat_id,
